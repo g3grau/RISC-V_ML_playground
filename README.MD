@@ -1,12 +1,42 @@
 # Repo edited for RISC-V Edged AI Workshop using VSDSquadron Pro Board
 Use this repo as starting point for RISC-V Edged AI Workshop using VSDSquadron Pro Board Neural Network implementation section
 Steps to follow:-
-1. Clone this repo 
+0. Clone this repo 
+git clone https://github.com/dhanvantibhavsar/RiscV_Edge_AI_Workshop.git
+
+1. Make a cloned version
+# check the current remote
+git remote -v
+# create a new online repo on github -> New -> set name as RISC-V_ML_playground
+# no README, no .gitignore, no anything...
+# copy ssh link git@github.com:g3grau/RISC-V_ML_playground.git
+# rename the existing remote
+git remote rename origin upstream
+# add the new repo as new origin
+git remote add origin git@github.com:g3grau/RISC-V_ML_playground.git
+# verify with git remote -v
+# add and push the main branch
+git branch -M main
+git push -u origin main
+# if needed, update from the original repo
+#git fetch upstream
+#git merge upstream/main
+# add a .gitignore file e.g from here
+# curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
+# to add or update content, do
+git add .      # or list the files
+# commit the changes
+git commit -m "my updates"
+# and upload the changes
+git push origin main
+
 2. Create a virtual environment using following command 
 ```
 python -m venv venv
 ```
 3. Activate virtual environment
+source venv/bin/activate.csh
+
 4. Install all the required libraries
 ```
 pip install -r requirement.txt
